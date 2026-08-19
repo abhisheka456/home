@@ -3,20 +3,19 @@ import Layout from '@/components/Layout';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
-  IoLogoFacebook,
   IoLogoGithub,
-  IoLogoInstagram,
-  IoLogoLinkedin,
-  IoLogoTwitter,
+  IoLogoGoogle,
+  IoDocumentTextOutline,
   IoPaperPlane,
   IoPaperPlaneOutline,
 } from 'react-icons/io5';
+import { FaResearchgate, FaOrcid } from 'react-icons/fa';
 
 export default function contact() {
   return (
     <>
       <Head>
-        <title>Contact :: GitWind</title>
+        <title>Contact :: Abhishek Kumar</title>
       </Head>
       <Layout border="border-2">
         <h3 className="text-lg font-semibold mt-4">Contact Details</h3>
@@ -28,7 +27,7 @@ export default function contact() {
             <h3 className="text-sm md:text-md">
               Don't like forms? Send me an{' '}
               <a
-                href="mailto:user@domain.com"
+                href="mailto:abhisheka456@gmail.com"
                 className="text-blue-600 hover:underline"
               >
                 email
@@ -37,30 +36,36 @@ export default function contact() {
             </h3>
             <h4>
               <span className="text-sm md:text-md font-semibold">Email : </span>
-              user@domain.com
+              abhisheka456@gmail.com
             </h4>
             <h4>
               <span className="text-sm md:text-md font-semibold">
                 Mobile :{' '}
               </span>{' '}
-              (+91) 99123-41234
+              (+91) 8858445884
+            </h4>
+            <h4>
+              <span className="text-sm md:text-md font-semibold">
+                Location :{' '}
+              </span>{' '}
+              Czech Republic
             </h4>
             <div className="mt-2">
               <div className="text-black text-xl flex gap-5">
-                <Link href="https://twitter.com/">
-                  <IoLogoTwitter className="hover:text-pink-600" />
-                </Link>
-                <Link href="https://linkedin.com/">
-                  <IoLogoLinkedin className="hover:text-pink-600" />
-                </Link>
-                <Link href="https://github.com/">
+                <Link href="https://github.com/abhisheka456">
                   <IoLogoGithub className="hover:text-pink-600" />
                 </Link>
-                <Link href="https://facebook.com/">
-                  <IoLogoFacebook className="hover:text-pink-600" />
+                <Link href="https://scholar.google.com/citations?user=uZRyTFIAAAAJ">
+                  <IoLogoGoogle className="hover:text-pink-600" />
                 </Link>
-                <Link href="https://instagram.com/">
-                  <IoLogoInstagram className="hover:text-pink-600" />
+                <Link href="https://www.researchgate.net/profile/Abhishek-Kumar-173">
+                  <FaResearchgate className="hover:text-pink-600" />
+                </Link>
+                <Link href="https://www.webofscience.com/wos/author/record/ABA-5251-2021">
+                  <IoDocumentTextOutline className="hover:text-pink-600" />
+                </Link>
+                <Link href="https://orcid.org/0000-0002-8783-5128">
+                  <FaOrcid className="hover:text-pink-600" />
                 </Link>
                 <Link href="https://telegram.me/">
                   <IoPaperPlane className="hover:text-pink-600" />
@@ -78,7 +83,7 @@ export default function contact() {
                 <input
                   type="text"
                   className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  placeholder="Joey Tribbiani"
+                  placeholder="Your name"
                   name="Name"
                   id="Name"
                 />
@@ -88,7 +93,7 @@ export default function contact() {
                 <input
                   type="email"
                   className="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  placeholder="user@domain.com"
+                  placeholder="you@example.com"
                   name="Email"
                   id="Email"
                 />
@@ -105,13 +110,13 @@ export default function contact() {
               </label>
 
               <label className="block">
-                <span className="text-gray-900">Messege</span>
+                <span className="text-gray-900">Message</span>
                 <textarea
                   className="form-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   rows={4}
-                  placeholder="Great to know about you User."
-                  name="Messege"
-                  id="Messege"
+                  placeholder="How can I help you?"
+                  name="Message"
+                  id="Message"
                 ></textarea>
               </label>
               <button
@@ -119,7 +124,7 @@ export default function contact() {
                 className="flex gap-1 items-center w-max border-none rounded px-3 py-1 bg-green-700 text-white hover:bg-green-600"
               >
                 <IoPaperPlaneOutline />
-                Send Messege
+                Send Message
               </button>
             </div>
           </form>

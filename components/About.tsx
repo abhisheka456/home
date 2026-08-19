@@ -10,35 +10,43 @@ export default function About() {
   return (
     <>
       <h1 className="text-lg font-semibold my-2">About Me</h1>
-      <div className="flex flex-col mb-4 text-lg tracking-wide gap-y-4 px-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tenetur
-          impedit obcaecati maxime ad reprehenderit facilis eligendi laborum
-          unde nisi optio earum, esse nam! Sed aspernatur placeat repudiandae
-          quam necessitatibus.
+      <div className="flex flex-col mb-4 text-lg tracking-wide gap-y-4 px-4 text-gray-800">
+        <h2 className="text-xl font-bold mb-4 text-indigo-700"> From the Banks of the Ganges to the Frontiers of Computational Intelligence</h2>
+        <p className="font-medium mb-6 text-blue-600">Algorithm Designer × Machine Visionary × Knowledge Architect</p>
+        <p className="font-medium mb-6 text-purple-700">Profession: Visiting Professor, ENET Center, CEETe, VSB-TOU, Ostrava, Czech Republic</p>
+        
+        <p className="mb-4">
+          My story begins in <span className="font-semibold text-blue-600">Patna, Bihar</span> - where the mighty Ganges first taught me that powerful currents (whether of water or ideas) always find their optimal path. This early inspiration carried me through:
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-          quidem minus sapiente laboriosam voluptatum ea maiores! Laboriosam
-          molestias temporibus, veritatis iure nesciunt officiis culpa beatae,
-          odit perferendis, facilis quo. Consequatur. Aliquid nulla nobis
-          labore! Esse ab id quam, architecto cumque, ipsa omnis nobis quod
-          voluptates ipsum obcaecati necessitatibus deserunt facere
-          exercitationem inventore porro laudantium. Repudiandae quod corporis
-          laudantium modi adipisci?
+
+        <ul className="space-y-3 mb-6">
+          <li>🏔️ <span className="font-semibold text-green-700">Himalayan Foundations</span><br/>B.Tech in Electrical Engineering at Uttarakhand Technical University</li>
+          <li>⚡ <span className="font-semibold text-purple-700">Varanasi Enlightenment</span><br/>Ph.D. in Systems Engineering at IIT (BHU), mastering nature-inspired computation</li>
+          <li>🌏 <span className="font-semibold text-blue-700">Global Odyssey</span><br/>Postdoc at Kyungpook National University (South Korea) → Professorship at Sejong University (Seoul) → Visiting Chair at VSB-TU Ostrava (Czech Republic)</li>
+        </ul>
+
+        <h3 className="text-lg font-bold mb-3">My Computational Toolkit</h3>
+        <p className="mb-4">I build bridges between:</p>
+        <ul className="space-y-2 mb-6">
+          <li>🧠 <span className="font-semibold text-indigo-700">Evolutionary Intelligence</span> (Swarm optimization champion - IEEE CEC 2017/2020)</li>
+          <li>👁️ <span className="font-semibold text-teal-700">Machine Perception</span> (Computer Vision & Deep Learning applications)</li>
+          <li>⚡ <span className="font-semibold text-amber-700">Energy Systems</span> (Optimizing power networks with bio-inspired algorithms)</li>
+        </ul>
+
+        <h3 className="text-lg font-bold mb-3">Shaping the Scientific Landscape</h3>
+        <p className="mb-4">
+          As Associate Editor for <span className="font-semibold text-indigo-700">Swarm and Evolutionary Computation</span> and other top journals, I curate the future of computational intelligence while mentoring the next generation of researchers.
         </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit vitae
-          quas, a laborum consequatur deserunt laudantium assumenda,
-          dignissimos, corporis dolores repudiandae recusandae. Voluptatem
-          tempora, officia illum repellendus temporibus quidem sapiente.
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
-          dolorem fuga nemo ducimus quas unde fugit deleniti nulla, ad numquam
-          iusto. Aspernatur odio perferendis quisquam accusamus, obcaecati omnis
-          fuga adipisci!
-        </p>
+
+        <h3 className="text-lg font-bold mb-3">Between Algorithms</h3>
+        <p className="mb-4">You'll find me:</p>
+        <ul className="space-y-2 mb-6">
+          <li>☕ Switching between <span className="italic text-amber-700">litti-chokha</span> nostalgia and <span className="italic text-red-600">kimchi</span> adventures</li>
+          <li>📚 Reviewing papers with the same intensity I once studied Bihar Board textbooks</li>
+          <li>🌉 Connecting my Bihari roots to global research collaborations</li>
+        </ul>
+
+        <p className="font-semibold text-lg text-indigo-700">Let's Optimize the Future - Together</p>
       </div>
     </>
   );

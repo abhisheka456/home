@@ -5,34 +5,40 @@ import Head from 'next/head';
 
 export default function projects() {
   const projectData = {
-    project1: {
-      title: 'Awesome Project Title',
-      subTitle: 'Subtitle',
+    energyAnalysis: {
+      title: 'Energy Consumption Pattern Analysis',
+      subTitle: 'Collaborator: Prof. Rammohan Mallipeddi (2021-2023)',
       desc:
-        "Used Django, HTML, CSS , JavaScript, Git, PostgreSQL, SQLite. This project is hosted on a Digital Ocean's Linux droplet.",
-      link: 'https://www.dntandan.ml/',
-      linkText: 'Website',
+        "AI-driven energy consumption analytics for incentive design & facility optimization. Funded by National Research Foundation of Korea (NRF).",
+      link: '',
+      linkText: '',
       stacks: [
-        { title: 'Django', color: 'text-red-200' },
-        { title: 'Git', color: 'text-blue-200' },
-        { title: 'PostgreSQL', color: 'text-gray-200' },
-        { title: 'DRF', color: 'text-yellow-200' },
-        { title: 'Digital Ocean', color: 'text-green-200' },
+        { title: 'Time-series forecasting', color: 'text-red-200' },
+        { title: 'Behavioral pattern clustering', color: 'text-blue-200' },
       ],
     },
-    project2: {
-      title: 'Another Awesome Project Title',
-      subTitle: 'Subtitle',
+    videoUnderstanding: {
+      title: 'Deep Learning for Video Understanding',
+      subTitle: 'Collaborator: Prof. Dong Gyun Lee (2023-2024)',
       desc:
-        "Used Django, HTML, CSS , JavaScript, Git, PostgreSQL, SQLite. This project is hosted on a Digital Ocean's Linux droplet.",
-      link: 'https://www.dntandan.ml/',
-      linkText: 'Website',
+        "Development of video recognition & captioning using deep learning/external knowledge bases. Funded by NRF Excellent Early-Career Researcher Grant.",
+      link: '',
+      linkText: '',
       stacks: [
-        { title: 'Django', color: 'text-red-200' },
-        { title: 'Git', color: 'text-blue-200' },
-        { title: 'PostgreSQL', color: 'text-gray-200' },
-        { title: 'DRF', color: 'text-yellow-200' },
-        { title: 'Digital Ocean', color: 'text-green-200' },
+        { title: 'Multimodal transformers', color: 'text-purple-200' },
+        { title: 'Knowledge-graph integration', color: 'text-green-200' },
+      ],
+    },
+    sustainableTech: {
+      title: 'Sustainable High-Tech Industries',
+      subTitle: 'Collaborator: Dr. Lukáš Prokop (2025-Present)',
+      desc:
+        "Regional sustainability through advanced tech under EU Just Transition Programme. Funded by EU Operational Programme REFRESH.",
+      link: '',
+      linkText: '',
+      stacks: [
+        { title: 'Renewable energy systems', color: 'text-yellow-200' },
+        { title: 'Smart manufacturing', color: 'text-indigo-200' },
       ],
     },
   };
@@ -44,56 +50,32 @@ export default function projects() {
       </Head>
       <Layout border="border-2">
         <h3 className="text-lg font-semibold my-4">
-          Here's what I have worked on based on my interests...
+          Research Projects & Collaborations
         </h3>
         <div className="grid gap-4 mb-3">
           <ProjectCards
-            title={projectData.project1.title}
-            subTitle={projectData.project1.subTitle}
-            desc={projectData.project1.desc}
-            link={projectData.project1.link}
-            linkText={projectData.project1.linkText}
-            stacks={projectData.project1.stacks}
+            title={projectData.energyAnalysis.title}
+            subTitle={projectData.energyAnalysis.subTitle}
+            desc={projectData.energyAnalysis.desc}
+            link={projectData.energyAnalysis.link}
+            linkText={projectData.energyAnalysis.linkText}
+            stacks={projectData.energyAnalysis.stacks}
           />
           <ProjectCards
-            title={projectData.project2.title}
-            subTitle={projectData.project2.subTitle}
-            desc={projectData.project2.desc}
-            link={projectData.project2.link}
-            linkText={projectData.project2.linkText}
-            stacks={projectData.project2.stacks}
+            title={projectData.videoUnderstanding.title}
+            subTitle={projectData.videoUnderstanding.subTitle}
+            desc={projectData.videoUnderstanding.desc}
+            link={projectData.videoUnderstanding.link}
+            linkText={projectData.videoUnderstanding.linkText}
+            stacks={projectData.videoUnderstanding.stacks}
           />
           <ProjectCards
-            title={projectData.project1.title}
-            subTitle={projectData.project1.subTitle}
-            desc={projectData.project1.desc}
-            link={projectData.project1.link}
-            linkText={projectData.project1.linkText}
-            stacks={projectData.project1.stacks}
-          />
-          <ProjectCards
-            title={projectData.project2.title}
-            subTitle={projectData.project2.subTitle}
-            desc={projectData.project2.desc}
-            link={projectData.project2.link}
-            linkText={projectData.project2.linkText}
-            stacks={projectData.project2.stacks}
-          />
-          <ProjectCards
-            title={projectData.project1.title}
-            subTitle={projectData.project1.subTitle}
-            desc={projectData.project1.desc}
-            link={projectData.project1.link}
-            linkText={projectData.project1.linkText}
-            stacks={projectData.project1.stacks}
-          />
-          <ProjectCards
-            title={projectData.project2.title}
-            subTitle={projectData.project2.subTitle}
-            desc={projectData.project2.desc}
-            link={projectData.project2.link}
-            linkText={projectData.project2.linkText}
-            stacks={projectData.project2.stacks}
+            title={projectData.sustainableTech.title}
+            subTitle={projectData.sustainableTech.subTitle}
+            desc={projectData.sustainableTech.desc}
+            link={projectData.sustainableTech.link}
+            linkText={projectData.sustainableTech.linkText}
+            stacks={projectData.sustainableTech.stacks}
           />
         </div>
       </Layout>

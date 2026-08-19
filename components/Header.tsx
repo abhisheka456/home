@@ -1,30 +1,28 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import {
   IoAlertCircleOutline,
-  IoBookOutline,
   IoAlbumsOutline,
-  IoBulbOutline,
   IoMailOutline,
   IoMenuSharp,
   IoChatboxEllipsesOutline,
   IoRibbonOutline,
   IoSchoolOutline,
   IoBriefcaseOutline,
-  IoLogoTwitter,
-  IoLogoLinkedin,
+  IoNewspaperOutline,
   IoLogoGithub,
-  IoLogoFacebook,
-  IoLogoInstagram,
-  IoPaperPlane,
+  IoDocumentTextOutline,
   IoCode,
+  IoNotificationsOutline,
 } from 'react-icons/io5';
+import { FaGraduationCap, FaResearchgate, FaOrcid } from 'react-icons/fa';
+
 import DarkToggle from './DarkToggle';
 
-export default function Header() {
+export default function Header({ setIsAnnouncementOpen, isAnnouncementOpen }) {
   const router = useRouter();
   const [subHeader, setSubHeader] = useState(0);
 
@@ -86,7 +84,7 @@ export default function Header() {
                           className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
                         >
                           <IoSchoolOutline className="w-5 h-5 mr-2" />
-                          Education & Skills
+                          Research & Education
                         </a>
                       </Menu.Item>
                       <Menu.Item>
@@ -105,6 +103,15 @@ export default function Header() {
                         >
                           <IoAlbumsOutline className="w-5 h-5 mr-2" />
                           Projects
+                        </a>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <a
+                          href="/publications"
+                          className="bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm"
+                        >
+                          <IoNewspaperOutline className="w-5 h-5 mr-2" />
+                          Publications
                         </a>
                       </Menu.Item>
                       <Menu.Item>
@@ -134,14 +141,6 @@ export default function Header() {
                           Contact
                         </a>
                       </Menu.Item>
-                      <Menu.Item>
-                        <a
-                          href="https://dntandan.ml"
-                          className="text-center border-t bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-3 mt-1 text-sm"
-                        >
-                          Made with 💙 by @dntandan
-                        </a>
-                      </Menu.Item>
                     </div>
                   </Menu.Items>
                 </Transition>
@@ -151,7 +150,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex gap-2 items-center">
               <IoCode className="text-2xl" />
-              <h3 className="text-lg font-bold">johndoe</h3>
+              <h3 className="text-lg font-bold">Abhishek Kumar, Ph. D</h3>
             </div>
           </Link>
           <div className="pt-2">
@@ -167,38 +166,33 @@ export default function Header() {
         id="header"
       >
         <div className="flex flex-row justify-between px-8 py-4 text-white dark:text-white">
-          <div>
-            <p>
-              Made with 💙 by <Link href="https://dntandan.ml">@dntandan</Link>
-            </p>
-          </div>
           <Link href="/">
             <div className="flex gap-2 items-center">
               <IoCode className="text-2xl" />
-              <h3 className="text-lg font-bold">johndoe</h3>
+              <h3 className="text-lg font-bold">Abhishek Kumar, Ph. D</h3>
             </div>
           </Link>
 
           <div className="pt-1">
             <div className="text-white text-xl flex gap-5 dark:text-white">
-              <Link href="https://twitter.com/">
-                <IoLogoTwitter className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://linkedin.com/">
-                <IoLogoLinkedin className="hover:text-blue-300" />
-              </Link>
-              <Link href="https://github.com/">
+              <Link href="https://github.com/abhisheka456">
                 <IoLogoGithub className="hover:text-blue-300" />
               </Link>
-              <Link href="https://facebook.com/">
-                <IoLogoFacebook className="hover:text-blue-300" />
+              <Link href="https://scholar.google.com/citations?user=uZRyTFIAAAAJ">
+                <FaGraduationCap className="hover:text-blue-300" />
               </Link>
-              <Link href="https://instagram.com/">
-                <IoLogoInstagram className="hover:text-blue-300" />
+              <Link href="https://www.researchgate.net/profile/Abhishek-Kumar-173">
+                <FaResearchgate className="hover:text-blue-300" />
               </Link>
-              <Link href="https://telegram.me/">
-                <IoPaperPlane className="hover:text-blue-300" />
+              <Link href="https://www.webofscience.com/wos/author/record/ABA-5251-2021">
+                <IoDocumentTextOutline className="hover:text-blue-300" />
               </Link>
+              <Link href="https://orcid.org/0000-0002-8783-5128">
+                <FaOrcid className="hover:text-blue-300" />
+              </Link>
+              <button onClick={() => setIsAnnouncementOpen(!isAnnouncementOpen)}>
+                <IoNotificationsOutline className="hover:text-blue-300" />
+              </button>
             </div>
           </div>
         </div>
@@ -236,7 +230,7 @@ export default function Header() {
               }
             >
               <IoSchoolOutline />
-              <h1 className="ml-2">Education & Skills</h1>
+              <h1 className="ml-2">Research & Education</h1>
             </div>
           </Link>
           <Link href="/experience">
@@ -261,6 +255,18 @@ export default function Header() {
             >
               <IoAlbumsOutline />
               <h1 className="ml-2">Projects</h1>
+            </div>
+          </Link>
+          <Link href="/publications">
+            <div
+              className={
+                router.pathname == '/publications'
+                  ? 'p-2 w-auto flex border-b border-red-500 items-center'
+                  : 'p-2 w-auto flex border-b border-transparent  hover:border-gray-400 items-center'
+              }
+            >
+              <IoNewspaperOutline />
+              <h1 className="ml-2">Publications</h1>
             </div>
           </Link>
           <Link href="/awards-certification">

@@ -5,112 +5,102 @@ import CertificationCard from '@/components/CertificationCard';
 import Head from 'next/head';
 
 export default function awardsAndCertification() {
-  const awardData = {
-    ahack: {
-      title: ' AngelHack Global Hackathon Series',
-      date: '2019',
-      place: 'Bangalore, India - Winner',
-      link: '/angelhack-global-hackathon-series-2019',
-      linkText: 'Blog',
-    },
-    valp: {
-      title: 'Valuepitch E Technologies Hackathon',
-      date: '2019',
-      place: 'Bangalore, India - Second Runner',
-      link:
-        'https://farm66.staticflickr.com/65535/47702473231_248f82643f_b.jpg',
-      linkText: 'Image',
-    },
-    vtubb: {
-      title: 'VTU Inter-Collegiate Basketball Tournament',
-      date: '2018',
-      place: 'Karnataka, India - Winner',
-      link:
-        'https://www.facebook.com/photo.php?fbid=1622519817863750&set=t.100003956946689&type=3',
-      linkText: 'Social Media Post',
-    },
-  };
-  const certData = {
-    dcmp: {
-      title: 'Data Science For Everyone',
-      platform: 'DataCamp',
-      date: '2019',
-      link: '',
-      linkText: '',
-    },
-    nptelPython: {
-      title: 'Python For Data Science',
-      platform: 'NPTEL',
-      date: '2019',
-      link: '',
-      linkText: '',
-    },
-    nptelcnc: {
-      title: 'Cryptography & Network Security',
-      platform: 'NPTEL',
-      date: '2019',
-      link: '',
-      linkText: '',
-    },
-    npteldsa: {
-      title: 'Design & Analysis Of Algorithm',
-      platform: 'NPTEL',
-      date: '2019',
-      link: '',
-      linkText: '',
-    },
-  };
+  
   return (
     <>
       <Head>
         <title>Awards & Certification :: GitWind</title>
       </Head>
       <Layout border="border-2">
-        <h3 className="text-lg font-semibold mt-3">Awards</h3>
-        <div className="flex flex-col">
+        <div className="prose max-w-none text-gray-800 dark:text-gray-200">
+          <h4 className="text-xl font-bold text-indigo-700 dark:text-indigo-300">🏆 Academic & Research Achievements</h4>
+          
+          <h5 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">Journal Recognition</h5>
           <AwardCard
-            title={awardData.ahack.title}
-            date={awardData.ahack.date}
-            place={awardData.ahack.place}
-            link={awardData.ahack.link}
-            linkText={awardData.ahack.linkText}
+            icon="🏆"
+            title="2022 Best Paper Award (Editor's Selection)"
+            place="Applied Soft Computing"
+            date="2022"
+            description="Paper: The spherical search algorithm for bound-constrained global optimization problems"
+            link="https://www.sciencedirect.com/journal/applied-soft-computing/about/awards"
+            linkText="Award Link"
+          />
+
+          <h5 className="font-semibold mt-4 text-indigo-700">Competitive Algorithm Rankings</h5>
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-4 bg-white dark:bg-gray-800">
+            <div className="overflow-x-auto">
+            <table className="min-w-full border border-gray-300 dark:border-gray-700">
+              <thead>
+                <tr className="bg-gray-100 dark:bg-gray-800">
+                  <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Algorithm</th>
+                  <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Competition</th>
+                  <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Rank</th>
+                  <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Conference/Year</th>
+                  <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100"><span className="text-indigo-600 dark:text-indigo-300">SASS</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Real-World Const. SOO</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">🥇 <span className="text-indigo-600 dark:text-indigo-300">1st</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">IEEE CEC-2020 & GECCO-2020</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Glasgow, UK / Cancún, MX</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100"><span className="text-indigo-600 dark:text-indigo-300">sCMAgES</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Real-World Const. SOO</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">🥉 <span className="text-indigo-600 dark:text-indigo-300">3rd</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">IEEE CEC-2020 & GECCO-2020</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Glasgow, UK / Cancún, MX</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100"><span className="text-indigo-600 dark:text-indigo-300">ESHADE_USM</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">100-Digit Challenge</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">5th</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">IEEE CEC-2019</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Wellington, NZ</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100"><span className="text-indigo-600 dark:text-indigo-300">EBOwithCMAR</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Non-tuning Section</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">🥈 <span className="text-indigo-600 dark:text-indigo-300">2nd</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">IEEE CEC-2019</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Wellington, NZ</td>
+                </tr>
+                <tr>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100"><span className="text-indigo-600 dark:text-indigo-300">EBOwithCMAR</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Real-Param. SOO</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">🥇 <span className="text-indigo-600 dark:text-indigo-300">1st</span></td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">IEEE CEC-2017</td>
+                  <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-800 dark:text-gray-100">Donostia, Spain</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+
+          <h5 className="text-lg font-semibold mt-4 text-indigo-700 dark:text-indigo-300">Other Honors</h5>
+          <AwardCard
+            icon="🥇"
+            title="Poster Presentation - 1st Prize"
+            place="IIT (BHU) Institute Day"
+            date="Feb 2018 | Varanasi, India"
+            description="For 'Effective Butterfly Optimizer'"
           />
           <AwardCard
-            title={awardData.valp.title}
-            date={awardData.valp.date}
-            place={awardData.valp.place}
-            link={awardData.valp.link}
-            linkText={awardData.valp.linkText}
+            icon="🏅"
+            title="Early Career Awards"
+            place="IEEE CIS UP Section, IIT Kanpur"
+            date="2016"
+            description="Young Researcher Award-2016"
           />
           <AwardCard
-            title={awardData.vtubb.title}
-            date={awardData.vtubb.date}
-            place={awardData.vtubb.place}
-            link={awardData.vtubb.link}
-            linkText={awardData.vtubb.linkText}
-          />
-        </div>
-        <h3 className="text-lg font-semibold mt-3">Certification</h3>
-        <div className="flex flex-col">
-          <CertificationCard
-            title={certData.dcmp.title}
-            date={certData.dcmp.date}
-            platform={certData.dcmp.platform}
-          />
-          <CertificationCard
-            title={certData.nptelPython.title}
-            date={certData.nptelPython.date}
-            platform={certData.nptelPython.platform}
-          />
-          <CertificationCard
-            title={certData.nptelcnc.title}
-            date={certData.nptelcnc.date}
-            platform={certData.nptelcnc.platform}
-          />
-          <CertificationCard
-            title={certData.npteldsa.title}
-            date={certData.npteldsa.date}
-            platform={certData.npteldsa.platform}
+            icon="🎓"
+            title="Academic Excellence"
+            place="UTU"
+            date="B.Tech"
+            description="Top 3 Rank throughout B.Tech & MHRD Ph.D Scholarship (5 years via GATE)"
           />
         </div>
       </Layout>
