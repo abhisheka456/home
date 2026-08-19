@@ -1,81 +1,79 @@
 <p align="center">
   <br>
-  <a href="https://getresources.ml">
-    <img src="public/gitwind-logo.png" width="300"/>
-  </a>
+  <img src="public/assets/img/Abhishek.jpeg" width="150" style="border-radius:50%;"/>
 </p>
 
 <div align="center">
-<h1 style="margin-bottom:-10px;">GitWind Portfolio</h1>
-A Github themed portfolio template using TailwindCSS
+<h1 style="margin-bottom:-10px;">Abhishek Kumar — Portfolio</h1>
+Personal portfolio, publications, and research blog — built with Next.js and TailwindCSS.
 <br>
+<a href="https://abhisheka456.github.io/home/">abhisheka456.github.io/home</a>
 </div>
-<p align="center" style="margin-top:10px;">
-  <a title="MIT License" href="LICENSE">
-    <img src="https://img.shields.io/github/license/gridsome/gridsome.svg?style=flat-square&label=License&colorB=6cc24a">
-  </a>
-  
-</p>
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/dntandan/gitwind-portfolio)
 
 ## Features
 
-- Dark Theme
-- NextJS
-- TailwindCSS
-- Mobile Friendly
+- 🎓 **Academic CV** — experience, education, skills, awards & certifications
+- 📄 **Publications** — peer-reviewed research papers with full list
+- 📝 **Blog** — research summaries written from published work
+- 🌙 **Dark theme** — TailwindCSS with nightwind
+- 📱 **Mobile friendly** — responsive layout with sidebar
+- 🗂️ **Downloadable resume** — one-click PDF download
+- ⚙️ **Static export + GitHub Pages** — auto-deployed by GitHub Actions
 
+## Tech Stack
 
-## Demo
-
-- [Demo Site](https://gitwind.ml) - This repository
-- [My Personal Demo](https://dntandan.ml)- Production website of my portfolio & Blog
-
-
-## Installation
-
-Install gitwind-portfolio with yarn
-
-```bash
-  yarn install
-```
+- [Next.js](https://nextjs.org/) (Pages Router, static export)
+- [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/) with [nightwind](https://github.com/jjcoffes/nightwind) dark mode
+- [react-icons](https://react-icons.github.io/react-icons/)
+- Deployed to [GitHub Pages](https://pages.github.com/)
 
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://github.com/dntandan/gitwind-portfolio
+  git clone https://github.com/abhisheka456/home
 ```
 
 Go to the project directory
 
 ```bash
-  cd gitwind-portfolio
+  cd home
 ```
 
 Install dependencies
 
 ```bash
-  yarn install
+  npm install
 ```
 
-Start the server
+Start the development server
 
 ```bash
-  yarn dev
+  npm run dev
 ```
 
-## Contributing
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Contributions are always welcome!
+## Build
 
-See `contributing.md` for ways to get started.
+Create a production static export (outputs to `out/`):
 
-Please adhere to this project's `code of conduct`.
+```bash
+  npm run build
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel](https://vercel.com/) from the creators of Next.js.
+The site is deployed to GitHub Pages at `https://abhisheka456.github.io/home/` via the
+GitHub Actions workflow in `.github/workflows/nextjs.yml`. Every push to the `main`
+branch builds the site, injects the Pages base path into `next.config.js`, and
+deploys automatically. No manual steps required.
 
+> Because the site is served under the repo's `/home` path, asset URLs (avatar, resume)
+> go through the `lib/asset.ts` helper which prefixes them with the configured base path.
+
+## License
+
+This project is open source and available under the [MIT license](https://choosealicense.com/licenses/mit/).
